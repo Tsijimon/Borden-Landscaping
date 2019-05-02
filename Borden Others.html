@@ -1,7 +1,54 @@
-
 <!DOCTYPE html>
 <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+	h1{
+		text-align: center
+	}
+body{
+  margin: 0;
+  padding: 0;
+}
+.images{
+  overflow: hidden;
+  text-align: center;
+}
+.images img{
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.images img:hover{
+  opacity: 0.8;
+}
+.pre{
+  width: 900px;
+  height: 520px;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+.pre img{
+  width: 100%;
+  height: 100%;
+}
+.pre a{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+}
+#externalNav {
+	/*box-shadow: 0px 0px 10px black;*/
+	border-color: #4256a6;
+	border-radius: 5px;
+}
 nav ul {
 	list-style-type: none;
 	margin: 0px 0px 5px 0px;
@@ -14,16 +61,7 @@ nav {
 	text-align: center;
 }
 nav ul li {
-	float: left;
-}
-figure {
-	text-align: center;
-}
-#externalNav {
-	/*box-shadow: 0px 0px 10px black;*/
-	border-color: #4256a6;
-	border-radius: 5px;
-}
+	float: left;}
 #externalNav li a {
 	display: block;
 	color: black;
@@ -33,42 +71,50 @@ figure {
 }
 #externalNav li a:hover {
 
-	background-color: #444;
+	background-color: #444;}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 450px;
+  position: relative;
+  margin: auto;
 }
-li a:active {
-	background-color: #555;
-}
-
-#currentPage {
-	background-color: #cdd6fd;
-
-}#innerNav li a {
-	display: block;
-	color: black;
-	text-align: center;
-	padding: 5px 30px;
-	text-decoration: none;
-}
-#innerNav li a:hover {
-	background-color: #c3cffd;
-}
-nav #innerNav ul li a:active {
-	color: darkblue;
 </style>
-
+</head>
 <body>
-
-	<nav>
-			<ul id="externalNav">
-<b>					<li><a href="Borden Home Page.html">Home</a></li>
+		<nav>
+				<ul id="externalNav">
+		  <b>					<li><a href="Borden Home Page.html">Home</a></li>
 					<li><a href="Borden About Us.html">About Us</a></li>
 					<li><a href="Borden Fire Pits.html">Fire Pits</a></li>
 					<li><a href="Borden Front Yard.html">Front Yard</a></li>
 					<li><a href="Borden Others.html">Others</a></li>
 					<li><a href="Borden Contact Us.html">Contact Us</a></p></li>
-                </b>
-			</ul>
-		</nav>
-        <p>
-        </p>
-    </body>
+						  </b>
+				</ul>
+			  </nav>
+			  <h1>We can handle any job, from stone walls to pools! Just ask!<br>
+					Here are a few examples of our work </h1>
+<div class="images">
+		<img onclick="changeimg(this)" src="other0.jpg" alt="Stone Pool">
+		<img onclick="changeimg(this)" src="other1.jpg" alt="Stones">
+		<img onclick="changeimg(this)" src="other3.jpg" alt="Pool">
+		<img onclick="changeimg(this)" src="other4.jpg" alt="Stone Wall">
+	  </div>
+	  
+	  <div class="pre">
+		<a onclick="this.parentElement.style.display='none'" class="ion-close"></a>
+		<img id="p" src="1.jpg" alt="">
+	  </div>
+	  
+	  <script type="text/javascript">
+	  function changeimg(image) {
+		var p = document.getElementById("p");
+		p.src = image.src;
+		p.parentElement.style.display ="block";
+	  }
+	  
+	  </script>
+	  
+		</body>
+	  </html>
+	  
