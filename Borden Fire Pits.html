@@ -1,61 +1,8 @@
-
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-nav ul {
-	list-style-type: none;
-	margin: 0px 0px 5px 0px;
-	padding: 0;
-	overflow: hidden;
-	background-color: rgb(206, 221, 153);
-}
-nav {
-	clear: both;
-	text-align: center;
-}
-nav ul li {
-	float: left;
-}
-figure {
-	text-align: center;
-}
-#externalNav {
-	/*box-shadow: 0px 0px 10px black;*/
-	border-color: #4256a6;
-	border-radius: 5px;
-}
-#externalNav li a {
-	display: block;
-	color: black;
-	text-align: center;
-	padding: 5px 30px;
-	text-decoration: none;
-}
-#externalNav li a:hover {
-
-	background-color: #444;
-}
-li a:active {
-	background-color: #555;
-}
-
-#currentPage {
-	background-color: #cdd6fd;
-
-}#innerNav li a {
-	display: block;
-	color: black;
-	text-align: center;
-	padding: 5px 30px;
-	text-decoration: none;
-}
-#innerNav li a:hover {
-	background-color: #c3cffd;
-}
-nav #innerNav ul li a:active {
-	color: darkblue;
-
-	body {
+body {
   font-family: Arial;
   margin: 0;
 }
@@ -150,115 +97,101 @@ img {
 .demo:hover {
   opacity: 1;
 }
-
 </style>
-
 <body>
-		<h2 style="text-align:center">Fire Pits</h2>
 
-		<div class="container">
-		  <div class="mySlides">
-			<div class="numbertext">1 / 6</div>
-			<img src="fire pit.jpg" style="width:100%">
-		  </div>
-		
-		  <div class="mySlides">
-			<div class="numbertext">2 / 6</div>
-			<img src="fire-pit-2.jpg" style="width:100%">
-		  </div>
-		
-		  <div class="mySlides">
-			<div class="numbertext">3 / 6</div>
-			<img src="fire-pit-3.jpg" style="width:100%">
-		  </div>
-			
-		  <div class="mySlides">
-			<div class="numbertext">4 / 6</div>
-			<img src="fire-pit-4.jpg" style="width:100%">
-		  </div>
-		
-		  <div class="mySlides">
-			<div class="numbertext">5 / 6</div>
-			<img src="image17.jpg" style="width:100%">
-		  </div>
-			
-		  <div class="mySlides">
-			<div class="numbertext">6 / 6</div>
-			<img src="image13-300x225.jpg" style="width:100%">
-		  </div>
-			
-		  <a class="prev" onclick="plusSlides(-1)">❮</a>
-		  <a class="next" onclick="plusSlides(1)">❯</a>
-		
-		  <div class="caption-container">
-			<p id="caption"></p>
-		  </div>
-		
-		  <div class="row">
-			<div class="column">
-			  <img class="demo cursor" src="fire pit.jpg" style="width:100%" onclick="currentSlide(1)" alt="pit">
-			</div>
-			<div class="column">
-			  <img class="demo cursor" src="fire-pit-2.jpg" style="width:100%" onclick="currentSlide(2)" alt="pit">
-			</div>
-			<div class="column">
-			  <img class="demo cursor" src="fire-pit-3.jpg" style="width:100%" onclick="currentSlide(3)" alt="pit">
-			</div>
-			<div class="column">
-			  <img class="demo cursor" src="fire-pit-4.jpg" style="width:100%" onclick="currentSlide(4)" alt="pit">
-			</div>
-			<div class="column">
-			  <img class="demo cursor" src="image17.jpg" style="width:100%" onclick="currentSlide(5)" alt="pit">
-			</div>    
-			<div class="column">
-			  <img class="demo cursor" src="image13-300x225.jpg" style="width:100%" onclick="currentSlide(6)" alt="pit">
-			</div>
-		  </div>
-		</div>
-		<script>
-				var slideIndex = 1;
-				showSlides(slideIndex);
-				
-				function plusSlides(n) {
-				  showSlides(slideIndex += n);
-				}
-				
-				function currentSlide(n) {
-				  showSlides(slideIndex = n);
-				}
-				
-				function showSlides(n) {
-				  var i;
-				  var slides = document.getElementsByClassName("mySlides");
-				  var dots = document.getElementsByClassName("demo");
-				  var captionText = document.getElementById("caption");
-				  if (n > slides.length) {slideIndex = 1}
-				  if (n < 1) {slideIndex = slides.length}
-				  for (i = 0; i < slides.length; i++) {
-					  slides[i].style.display = "none";
-				  }
-				  for (i = 0; i < dots.length; i++) {
-					  dots[i].className = dots[i].className.replace(" active", "");
-				  }
-				  slides[slideIndex-1].style.display = "block";
-				  dots[slideIndex-1].className += " active";
-				  captionText.innerHTML = dots[slideIndex-1].alt;
-				}
-				</script>	
-				</html>
-			</body>	
+<h2 style="text-align:center">Slideshow Gallery</h2>
 
-	<nav>
-			<ul id="externalNav">
-<b>					<li><a href="Borden Home Page.html">Home</a></li>
-					<li><a href="Borden About Us.html">About Us</a></li>
-					<li><a href="Borden Fire Pits.html">Fire Pits</a></li>
-					<li><a href="Borden Front Yard.html">Front Yard</a></li>
-					<li><a href="Borden Others.html">Others</a></li>
-					<li><a href="Borden Contact Us.html">Contact Us</a></p></li>
-                </b>
-			</ul>
-		</nav>
-        <p>
-        </p>
-    </body>
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="fire pit.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="fire-pit-2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="fire-pit-3.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="fire-pit-4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="image17.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="image13-300x225.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="fire pit.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="fire-pit-2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="fire-pit-3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="fire-pit-4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="image17.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="image13-300x225.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+</html>
