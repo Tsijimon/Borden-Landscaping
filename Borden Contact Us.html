@@ -2,12 +2,24 @@
 <!DOCTYPE html>
 <html>
 <style>
+	.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 nav ul {
 	list-style-type: none;
 	margin: 0px 0px 5px 0px;
 	padding: 0;
 	overflow: hidden;
 	background-color: rgb(206, 221, 153);
+	text-align: center
 }
 nav {
 	clear: both;
@@ -54,6 +66,7 @@ li a:active {
 }
 nav #innerNav ul li a:active {
 	color: darkblue;
+}
 </style>
 
 <body>
@@ -69,6 +82,35 @@ nav #innerNav ul li a:active {
                 </b>
 			</ul>
 		</nav>
-        <p>
-        </p>
+		<div class="row">
+<div class="column">
+	<h1>Schedule today!</h1>
+		<form action="/action_page.php">
+			Pick your date here...
+			<input type="datetime-local" name="bdaytime">
+			<input type="submit" value="Send">
+		  </form>
+		  
+		  <p><strong>Note:</strong> type="datetime-local" is not supported in Firefox, Safari or Internet Explorer 12 and earlier versions.</p>
+
+		</div>
+		<div class="column">
+
+			<h1>If you'd prefer to contact us directly...</h1>
+<fieldset>
+<ul>
+		<li>	(708) 614-0000</li>
+ <br>
+	<li>	Email:
+<a href="mailto:bordenlandscaping@gmail.com">bordenlandscaping@gmail.com</a>
+	</li>
+	<br>
+	<li>	Address:
+		15811 S. Central Avenue #1118
+		Oak Forest, Illinois
+		60452</li>
+	</ul>
+</fieldset>
+		</div>
+	</div>
     </body>
