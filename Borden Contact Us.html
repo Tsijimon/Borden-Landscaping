@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html>
 <style>
+		footer {font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-size: 10px;}
 		body {font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-size: 18px;} 
 	.column {
@@ -88,13 +90,21 @@ nav #innerNav ul li a:active {
 		<div class="row">
 <div class="column">
 	<h1>Schedule today!</h1>
-		<form action="/action_page.php">
+		<form method="POST" action="https://formspree.io/Z1733697@students.niu.edu">
 			Pick your date here...
-			<input type="datetime-local" name="bdaytime">
+			<input type="date" name="scheduledate"><br>
+			<br>
+			First and Last Name
+			<input name="first and last name" type="name"><br>
+			<br>
+			Phone Number
+			<input name="Phone" type="phone number"><br>
+			<br>
+			General Project Idea<br>
+			<textarea name="message" rows="5" cols="60" ></textarea><br>
 			<input type="submit" value="Send">
 		  </form>
-		  
-		  <p><strong>Note:</strong> type="datetime-local" is not supported in Firefox, Safari or Internet Explorer 12 and earlier versions.</p>
+		
 
 		</div>
 		<div class="column">
@@ -116,4 +126,5 @@ nav #innerNav ul li a:active {
 </fieldset>
 		</div>
 	</div>
-    </body>
+		</body>
+		<footer><p>15811 S. Central Avenue #1118 Oak Forest, Illinois 60452 (708) 614-0000</p></footer>
